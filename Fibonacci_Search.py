@@ -3,10 +3,11 @@
 import math
 
 def fibonacci_search(a, b, n):
-    s = (1-5**0.5)/(1+5**0.5)
-    p = 1 / (1.61803*(1-s**(n+1))/(1-s**n)) # find the ration of consecutive fibonacci element .... golden ratio = 1.61803
   
-    for i in range(n):
+    for i in range(n,1,-1):
+        phi =1.61808
+        p = (int(round((phi**i - (1-phi)**i) / 5**0.5)))/(int(round((phi**(i+1) - (1-phi)**(i+1)) / 5**0.5))) # find the ration of consecutive fibonacci element .... golden ratio = 1.61803
+        print(p)
         x1 = (a+(b-a)*(1-p))
         x2 = (a+(b-a)*p)
         yx1 = f(x1)
@@ -23,4 +24,4 @@ def fibonacci_search(a, b, n):
  
 def f(x):
     return math.exp(x-2)-x 
-print(fibonacci_search(-2, 6, 40))
+print(fibonacci_search(-2, 6, 50))
