@@ -1,6 +1,5 @@
 # Fibonacci search with n function evaluations to minimize an univariate objective function in the interval [a,b] 
 
-
 import math
 
 def fibonacci_search(a, b, n):
